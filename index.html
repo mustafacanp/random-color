@@ -45,7 +45,7 @@ html, body{height:100%;margin:0;font-family:'Montserrat','sans-serif';color:#424
 <div class="modes">
     <div class="mode active" data-mode="random"> Random </div>
     <div class="mode" data-mode="bw"> Black&White </div>
-    <div class="mode" data-mode="rgb"> RGB </div>
+    <div class="mode" data-mode="police"> Police </div>
 </div>
 
 <div class="general-info">
@@ -61,7 +61,7 @@ html, body{height:100%;margin:0;font-family:'Montserrat','sans-serif';color:#424
 var init = function () {
 
     var elementsTagName="body", mainElement=$(elementsTagName), centerInfoElement=$(".center-info"), infoElement=$(".general-info"), copiedInfoElement = $('.copied-info'), color="", speed=1000, s=speed/5; mode="random", round=Math.round, random=Math.random, counter=0, isHiddenMode=false, isPauseMode=true, changeColorTimeout=null;
-    var modes = ["random", "bw", "rgb"];
+    var modes = ["random", "bw", "police"];
     var keyCodes = {
         hiddenMode: 27,     // ESC
         pauseMode: 32,      // Space
@@ -131,8 +131,8 @@ var init = function () {
                 modeBlackWhite();
             else if(mode == "random")
                 modeRandom();
-            else if(mode == "rgb")
-                modeRgb();
+            else if(mode == "police")
+                modePolice();
 
             counter++;
     }
@@ -201,15 +201,12 @@ var init = function () {
         color = counter%2 ? "0,0,0,1" : "255,255,255,1";
         mainElement.css("background-color","rgba("+color+")");
     }
-    var modeRgb = function() {
-        switch(counter%3) {
+    var modePolice = function() {
+        switch(counter%2) {
             case 0:
                 color = "rgba(255,0,0,1)";
                 break;
             case 1:
-                color = "rgba(0,255,0,1)";
-                break;
-            case 2:
                 color = "rgba(0,0,255,1)";
                 break;
         }
