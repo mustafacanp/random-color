@@ -5,10 +5,13 @@
 </head>
 <body>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&amp;subset=latin-ext" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+<link href="css/style.css?v=2.0.1" rel="stylesheet">
 <div class="speed-wrap">
+	<div class="range-slider-wrap">
+		<input id="range_slider" type="range" min="1" />
+	</div>
     <div class="speed-info">
-        Speed:<span class="speed">5.00</span>/sec
+		Speed:<span class="speed">5.00</span>/sec
     </div>
 </div>
 <div class="wrap-center-info">
@@ -22,13 +25,13 @@
     <div class="mode" data-mode="police"> Police </div>
 </div>
 <div class="general-info">
-    ↑ ↓   : Speed<br />
-    ← →   : Change Mode<br />
+    &#8593; &#8595; : Speed<br />
+    &#8592; &#8594; : Change Mode<br />
     ESC : Clear Page<br/>
     Space : Pause<br/>
     Enter : Copy Color<br/>
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js?v=2.0.0"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
