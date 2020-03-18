@@ -1,3 +1,3 @@
 ﻿# RandomColor
 
-[Demo](http://randomcolor.online)
+[Demo](https://mustafacanpalaz.com/randomColor)
