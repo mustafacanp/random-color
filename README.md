@@ -1,3 +1,3 @@
 ﻿# RandomColor
 
-[Demo](https://random-colour.netlify.app)
+[Demo](https://randomcolor2.netlify.app)
